@@ -1,0 +1,12 @@
+name: 'unittest'
+info: 123
+
+data:
+  a:1
+  b:2
+  c:3
+  d:'dsds'
+list:
+  - 1
+  - 2
+  - 'pytest'

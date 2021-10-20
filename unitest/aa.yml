@@ -1,0 +1,11 @@
+name : nn
+pp : pb
+
+data:
+    a:1
+    b:2
+    c:3
+list:
+  - a
+  - b
+  - c

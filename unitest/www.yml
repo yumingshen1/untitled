@@ -1,0 +1,26 @@
+#用例1
+-
+  cookieType : 1
+  dataType: 0
+  url : user/login
+  method : post
+  detail : 登录
+  data :
+    username: 张三
+    password : 123456
+  check :
+    - 操作成功
+    - ccvcv
+
+-
+  cookieType : 2
+  dataType: 0
+  url : user/login
+  method : post
+  detail : 注册
+  data :
+    username: 张三
+    password : 123456789
+  check :
+    - 操作成功
+    - ccvcv
