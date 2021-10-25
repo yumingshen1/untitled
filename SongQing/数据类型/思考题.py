@@ -190,10 +190,8 @@ with open(f'/Users/shenyuming/Downloads/sym/tuwen/log.txt') as f:
         if uid not in dict1:
             dict1[uid] = []
         dict1[uid].append(dict2)   ##将内层字典当做外层字典的值传入
-
-
-
-
 import pprint
 print(dict1)
 pprint.pprint(dict1)
+
+
