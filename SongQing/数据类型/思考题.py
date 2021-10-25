@@ -173,25 +173,61 @@ key 是各个学生的id号， value是 该学生的签到信息
 }
 '''
 
-dict1 = {}  #外层字典
-dict2 = {}  #内层字典
-with open(f'/Users/shenyuming/Downloads/sym/tuwen/log.txt') as f:
-    list1 = f.read().splitlines()      #读取每一行 ,返回一个list
-    for one in list1:
-        one1 = one.replace('(','').replace(')','').strip(',')  ##将不需要的符号替换，和去除
-        # print(one1)
-        checktime,lessonid,uid = one1.split(',')   ##用逗号分隔，将值赋值给三个变量
-        # print(checktime,lessonid,uid)
-        lessonid = lessonid.strip()       ###去除多余空格
-        uid = uid.strip()
-        ##将checktime,和 lessonid存入内层字典
-        dict2 = {'lessonid':lessonid,'checktime':checktime}
-        ##判断用户在不在外层字典中，如果没有生成用户id和空列表的键值对
-        if uid not in dict1:
-            dict1[uid] = []
-        dict1[uid].append(dict2)   ##将内层字典当做外层字典的值传入
-import pprint
-print(dict1)
-pprint.pprint(dict1)
+# dict1 = {}  #外层字典
+# dict2 = {}  #内层字典
+# with open(f'/Users/shenyuming/Downloads/sym/tuwen/log.txt') as f:
+#     list1 = f.read().splitlines()      #读取每一行 ,返回一个list
+#     for one in list1:
+#         one1 = one.replace('(','').replace(')','').strip(',')  ##将不需要的符号替换，和去除
+#         # print(one1)
+#         checktime,lessonid,uid = one1.split(',')   ##用逗号分隔，将值赋值给三个变量
+#         # print(checktime,lessonid,uid)
+#         lessonid = lessonid.strip()       ###去除多余空格
+#         uid = uid.strip()
+#         ##将checktime,和 lessonid存入内层字典
+#         dict2 = {'lessonid':lessonid,'checktime':checktime}
+#         ##判断用户在不在外层字典中，如果没有生成用户id和空列表的键值对
+#         if uid not in dict1:
+#             dict1[uid] = []
+#         dict1[uid].append(dict2)   ##将内层字典当做外层字典的值传入
+# import pprint
+# print(dict1)
+# pprint.pprint(dict1)
 
 
+
+'''
+现有文件1（如下，请保存到文件file1.txt中）， 记录了公司员工的薪资，其内容格式如下
+name: Jack   ;    salary:  12000
+ name :Mike ; salary:  12300
+name: Luk ;   salary:  10030
+  name :Tim ;  salary:   9000
+name: John ;    salary:  12000
+name: Lisa ;    salary:   11000
+每个员工一行，记录了员工的姓名和薪资，
+每行记录 原始文件中并不对齐，中间有或多或少的空格
+现要求实现一个python程序，计算出所有员工的税后工资（薪资的90%）和扣税明细，
+以如下格式存入新的文件 file2.txt中，如下所示
+name: Jack   ;    salary:  12000 ;  tax: 1200 ; income:  10800
+name: Mike   ;    salary:  12300 ;  tax: 1230 ; income:  11070
+name: Luk    ;    salary:  10030 ;  tax: 1003 ; income:   9027
+name: Tim    ;    salary:   9000 ;  tax:  900 ; income:   8100
+name: John   ;    salary:  12000 ;  tax: 1200 ; income:  10800
+name: Lisa   ;    salary:  11000 ;  tax: 1100 ; income:   9900
+要求像上面一样的对齐
+tax 表示扣税金额和 income表示实际收入。注意扣税金额和 实际收入要取整数
+'''
+
+
+##/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题2.txt
+
+with open('/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题2.txt') as file1,open('/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题3.txt',mode='w+') as file2:
+    file_list = file1.read().splitlines()   ##按行取出数据，不带\n
+    for one in file_list:
+        name = one.split(';')[0].strip()    ##J将名字和收入分割出来
+        salary = one.split(';')[1]
+        # print(name,salary)
+        name = name.split(':')[1].strip()    ###将名字和收入的值分割出来
+        salary = int(salary.split(':')[1].strip())
+        # print(name,salary)
+        file2.write(f'name:{name:7};  salary:{salary:<6};   tax:{int(salary*0.1):<5};  income:{int(salary*0.9):7}\n')
