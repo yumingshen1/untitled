@@ -217,8 +217,6 @@ name: Lisa   ;    salary:  11000 ;  tax: 1100 ; income:   9900
 要求像上面一样的对齐
 tax 表示扣税金额和 income表示实际收入。注意扣税金额和 实际收入要取整数
 '''
-
-
 ##/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题2.txt
 
 with open('/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题2.txt') as file1,open('/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题3.txt',mode='w+') as file2:
@@ -230,4 +228,101 @@ with open('/Users/shenyuming/Downloads/sym/tuwen/第五次课思考题2.txt') as
         name = name.split(':')[1].strip()    ###将名字和收入的值分割出来
         salary = int(salary.split(':')[1].strip())
         # print(name,salary)
-        file2.write(f'name:{name:7};  salary:{salary:<6};   tax:{int(salary*0.1):<5};  income:{int(salary*0.9):7}\n')
+        # file2.write(f'name:{name:7};  salary:{salary:<6};   tax:{int(salary*0.1):<5};  income:{int(salary*0.9):7}\n')
+
+
+
+'''
+统计10000以内有多少个含有9的数.
+'''
+
+# count = 0
+# for i in range(10001):
+#     if '9' in str(i):
+#         count+=1
+# print(count)
+#
+
+'''
+写一个猜数字游戏,需求如下:
+随机生成一个0-100之间的数字,让用户猜,如果用户猜对了,提示:回答正确,游戏结束.
+如果猜错了给出对应的提示(您输入的值过大,您输入的值过小),最多允许猜7次.
+'''
+
+from random import randint
+# number = random.randint(0,100)
+# print(number)
+# guess = 101
+# i = 0
+# while guess!=number:
+#     guess = int(input('请输入您的猜测吧：'))
+#     if guess>100:
+#         i = i + 1  #Python里没有i++的用法
+#         print("这是你第",i,"次猜数字: 超过100，请重新输入")
+#     elif guess<0:
+#         i = i + 1
+#         print("这是你第",i,"次猜的数字: 小于0，请重新输入")
+#     else:
+#         i = i + 1
+#         if i<7:    #猜7次
+#             if guess > number:
+#                 print("这是你第",i,"次猜的数字: 您输入的值大了")
+#             elif guess < number:
+#                 print("这是你第",i,"次猜的数字: 您输入的值小了")
+#             else :
+#                 print("猜对了,这是你第",i,"次猜的数字,it is ",number,"game is over!")
+#                 break
+#         else :
+#             print("这已经是你第",i,"次猜的数字了,猜错啦！sorry,game is over！")
+#             break
+#
+
+# num1 = randint(0,100)
+# print(num1)
+# for i in range(7):
+#     inp = int(input('请输入：'))
+#     if inp > num1:
+#         print('您输入的额大了')
+#     elif inp < num1:
+#         print('您输入的小了')
+#     else:
+#         print('正确')
+#         break
+# else:
+#     print('告辞')
+
+
+
+'''
+写一个三角形的类,包括初始化方法,计算周长的方法,计算面积的方法(可以用海伦公式)
+'''
+class SanJiaoXing:
+    def __init__(self,a,b,c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+        '''
+            统一需要用到的模块可以放在初始化中
+        '''
+        if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
+            return '不属于三角形'
+
+    def zhouchang(self):
+        # if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
+        #     return '不属于三角形'
+        # else:
+
+            return self.a+self.b+self.c
+    def MiJi(self):
+        # if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
+        #     return '不属于三角形'
+        # else:
+
+            p = (self.a + self.b + self.c) / 2   ##海伦公式，
+            return (p*(p-self.a) * (p-self.b) * (p-self.c))**0.5
+sjz = SanJiaoXing(3,4,5)
+print(sjz.zhouchang())
+print(sjz.MiJi())
+
+
