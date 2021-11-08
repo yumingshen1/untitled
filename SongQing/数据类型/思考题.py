@@ -296,33 +296,49 @@ from random import randint
 '''
 写一个三角形的类,包括初始化方法,计算周长的方法,计算面积的方法(可以用海伦公式)
 '''
-class SanJiaoXing:
-    def __init__(self,a,b,c):
-        self.a = a
-        self.b = b
-        self.c = c
+# class SanJiaoXing:
+#     def __init__(self,a,b,c):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#
+#         '''
+#             统一需要用到的模块可以放在初始化中
+#         '''
+#         if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
+#             return '不属于三角形'
+#
+#     def zhouchang(self):
+#         # if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
+#         #     return '不属于三角形'
+#         # else:
+#
+#             return self.a+self.b+self.c
+#     def MiJi(self):
+#         # if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
+#         #     return '不属于三角形'
+#         # else:
+#
+#             p = (self.a + self.b + self.c) / 2   ##海伦公式，
+#             return (p*(p-self.a) * (p-self.b) * (p-self.c))**0.5
+# sjz = SanJiaoXing(3,4,5)
+# print(sjz.zhouchang())
+# print(sjz.MiJi())
+#
 
-        '''
-            统一需要用到的模块可以放在初始化中
-        '''
-        if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
-            return '不属于三角形'
-
-    def zhouchang(self):
-        # if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
-        #     return '不属于三角形'
-        # else:
-
-            return self.a+self.b+self.c
-    def MiJi(self):
-        # if self.a+self.b <= self.c or self.a+self.c <= self.b or self.b+self.c <= self.a:
-        #     return '不属于三角形'
-        # else:
-
-            p = (self.a + self.b + self.c) / 2   ##海伦公式，
-            return (p*(p-self.a) * (p-self.b) * (p-self.c))**0.5
-sjz = SanJiaoXing(3,4,5)
-print(sjz.zhouchang())
-print(sjz.MiJi())
 
 
+'''
+九九乘法表，写入文件
+'''
+# with open(f'/Users/shenyuming/Downloads/sym/tuwen/chengfabiao.txt','w+') as f:
+#     for i in range(1,10):
+#         for j in range(1,i+1):
+#             f.write(f'{j}*{i}={j*i}\t')
+#         f.write('\n')
+
+
+
+str1 = "Runoob example....wow!!!"
+str2 = "exam"
+print(str1.find(str2, 4))

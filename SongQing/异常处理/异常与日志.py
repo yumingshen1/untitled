@@ -63,22 +63,22 @@ import time
 logging.basicConfig(level='DEBUG',filename=f'/Users/shenyuming/Downloads/sym/tuwen/long1.log',filemode='a+')
 
 ## 如果不加 logging.basicConfig() , 以下直接写会打印在控制台 ，加了logging.basicConfig(输入到文件)   debug info 默认不打印
-# logging.debug('debug级别')
-# logging.info('info级别')
-# logging.warning('warning级别')
-# logging.error('error级别')
-# logging.critical('崩溃级别')
+logging.debug('debug级别')
+logging.info('info级别')
+logging.warning('warning级别')
+logging.error('error级别')
+logging.critical('崩溃级别')
 
 
 '''
 打印原有的错误到文件，打印时只能用默认的except
 '''
-#
-# try:
-#     input = int(input('请输入一个数： '))
-#     print(1/input)
-# except:       ##打印原有的错误到文件，打印时只能用默认的except，  time.strftime('%Y-%m-%d %H:%M:%S')加入时间
-#     logging.error(time.strftime('%Y-%m-%d %H:%M:%S')+traceback.format_exc())
+
+try:
+    input = int(input('请输入一个数： '))
+    print(1/input)
+except:       ##打印原有的错误到文件，打印时只能用默认的except，  time.strftime('%Y-%m-%d %H:%M:%S')加入时间
+    logging.error(time.strftime('%Y-%m-%d %H:%M:%S')+traceback.format_exc())
 
 
 
@@ -100,7 +100,7 @@ if not os.path.exists('/Users/shenyuming/Downloads/sym/tuwen/'):  ##路径不存
     os.mkdir('/Users/shenyuming/Downloads/sym/tuwen/')
 
 logfile = '/Users/shenyuming/Downloads/sym/tuwen/long2.log'     ##创建文件
-logger.add(logfile)                             ##  将日志写入创建好的文件中 ，
+logger.add(logfile,rotation='100KB',compression='zip')   ##  将日志写入创建好的文件中 ，100kb为一个文件，压缩成zip格式
 
 for i in range(1000):                           ##写入数据
     # logger.info('试一试')                          ## 先准备好文件路径和文件，然后在写添加进文件，最后在写入数据，顺序不能乱

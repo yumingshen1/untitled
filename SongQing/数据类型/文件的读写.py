@@ -17,9 +17,9 @@ filepath = f'/Users/shenyuming/Downloads/sym/tuwen/sanguo.txt'
 
 
 fw = open(filepath,mode='r')
-# print(fw.readline())     ##读取一行
-# print(fw.readlines())    ##读取全部返回list
-# print(fw.readlines()[1])   ##读取全部列表的第二行
+print(fw.readline())     ##读取一行
+print(fw.readlines())    ##读取全部返回list
+print(fw.readlines()[1])   ##读取全部列表的第二行
 print(fw.read().splitlines())   ###读取所有内容,返回list 不带\n
 
 fw.close()
