@@ -88,7 +88,7 @@ teardown_class(self):
 #     @pytest.mark.parametrize('real,result',((1,1),(1,0)))
 #     def test_8(self,real,result):
 #         assert real==result
-#
+# a
 
 
 list1 = [[20,20],[10,10],[15,16]]

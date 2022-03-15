@@ -27,10 +27,10 @@ class Fanguan:
         return '鸡'
     def ya(self):
         return '鸭'
-fg = Fanguan()  ##实例化，  即时类创建是没有(), 在调用进行实例化的时候也要加上(),才是实例化
+fg = Fanguan()  ##实例化，  即使类创建是没有(), 在调用进行实例化的时候也要加上(),才是实例化
 
 
-##  hasattr(对象,属性) 判断对象中时候有某个方法或属性
+##  hasattr(对象,属性) 判断对象中是否有某个方法或属性
 while True:
     inp = input('请输入菜单：')
     if hasattr(fg,inp):     ##hasattr(对象,属性或方法) 判断对象中时候有某个方法或属性
