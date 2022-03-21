@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--声明在最开始-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个html</title>
+		<!-- css选择器 -->
+	<style type="text/css">
+	/* p表示选择所有的p标签 */
+		p{
+			color: aqua;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>一级标题</h1>
+
+	<div id = "id1">
+	用户名：<input type="text" name="usernam" id="na" placeholder = "用户名" />
+	<br/>
+	密码：<input type="password" name="password" id="ps" placeholder = "密码"/>
+	<br/>
+	<button type="button">
+		<span>登陆</span>
+		</button>
+	</div>
+
+	<div id = "id2">
+		<p>这是一个段落</p>
+		<a href="https://www.baidu.com">百度下，你就知道</a>
+		<br/>
+		<a href="https://cn.bing.com" target="_blank">有求必应</a>
+	</div>
+
+
+	<div id = "id3">
+		<input type="button" id="alert" value="alert" onclick="alert(helloalert)"/>
+		<input type="button" id="confirm" value="confirm" onclick="confirm(helloconfirm)"/>
+		<input type="button" id="prompt" value="prompt" onclick="prompt(helloprompt)"/>
+		<!-- 三种弹窗，selenium切换 -->
+	</div>
+
+	<!-- div#div3>ul>li*  type键  ul无序列表-->
+	<div id="id4">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+
+
+	<!-- div#div4>ol>li*3  ol有序列表 -->
+	<div id="id5">
+		<ol>
+			<li>呵呵</li>
+			<li>哒哒</li>
+			<li>且</li>
+		</ol>
+	</div>
+
+	<!-- div#div5>select>option   multiple 多选下拉列表  ， 单选去掉multiple属性-->
+	<id id="id6"><select multiple="multiple">
+			<option value="1">15k-20k</option>
+			<option value="2">20k-25k</option>
+			<option value="3">25k-30k</option>
+			<option value="3">30k-35k</option>
+			<option value="3">35k-40k</option>
+		</select></id>
+
+	<iframe id="if" name="nf" width="800" height="600" src="https://www.baidu.com"></iframe>
+	<!-- src内嵌其他链接 -->
+
+</body>
+</html>
