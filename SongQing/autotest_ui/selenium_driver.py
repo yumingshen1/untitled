@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # @Time : 2022/3/17 21:20
 # Auther : shenyuming
-# @File : one_selenium.py
+# @File : selenium_driver.py
 # @Software : PyCharm
 
 from selenium import webdriver
