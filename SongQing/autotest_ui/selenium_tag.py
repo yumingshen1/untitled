@@ -27,9 +27,9 @@ for _ in dir(ele):
 test_flage = 1
 
 if test_flage ==1:
-    print('元素文本：',ele.text)
-    print('元素的标签',ele.tag_name)
-    print('元素文本：',ele2.text)
-    print('元素的标签',ele2.tag_name)
+    print('p标签元素文本：',ele.text)
+    print('p标签',ele.tag_name)
+    print('title标签元素文本：',ele2.text)
+    print('title标签',ele2.tag_name)
 
 driver.quit()
