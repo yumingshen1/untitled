@@ -18,5 +18,6 @@ with webdriver.Chrome() as driver:
     path = os.path.join('{}'.format('file://')+file_path,'text_b.html')
     driver.get(path)
     sleep(1)
-    driver.find_element_by_xpath('//*[@class="ls_ssen vm"]').click()
+    # driver.find_element_by_xpath('//*[@class="ls_ssen vm"]').click()
+    driver.find_element_by_xpath("//*[@class='ls_ssen vm'][@id='confirm']").click()
     sleep(2)
