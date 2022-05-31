@@ -1,11 +1,13 @@
 # -*- coding:utf-8 -*-
 # @Time : 2022/5/31 18:12
 # Auther : shenyuming
-# @File : 键盘模块2.py
+# @File : 鼠标模块1_Actionchains.py
 # @Software : PyCharm
+
 '''
 知识点：点击操作|拖拽|按住松开|发送到元素的按键
 '''
+
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from time import sleep
