@@ -54,7 +54,7 @@ print(path2)
 '''
     webdriver的对象方法和属性 , 不看 _开头的方法
 '''
-test_flage =2
+test_flage =1
 if test_flage == 1:
     for _ in dir(driver):
         if _[0] != '_':
@@ -65,5 +65,5 @@ if test_flage == 2:
         if _[:4] == 'find':
             print(_)
 
-
+driver.quit()
 

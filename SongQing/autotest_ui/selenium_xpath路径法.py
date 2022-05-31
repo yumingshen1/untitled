@@ -13,7 +13,7 @@ import os
 
 with webdriver.Chrome() as driver:
     file_path = os.path.dirname(__file__)
-    path = os.path.join('{}'.format('file://')+file_path,'text_b.html')
+    path = os.path.join('{}'.format('file://') + file_path, 'test_b.html')
     driver.get(path)
     sleep(1)
     driver.find_element_by_xpath('/html/body/div/div[1]/input[1]').click()

@@ -6,7 +6,7 @@
 
 '''
     class属性定位
-    一个元素内有多个值，只写一个   class = 's_de cv' ,  只取s_de 或  cv .
+    一个元素内有多个值，只写一个   class = 's_de cv' ,  只取s_de 或  cv，    如果硬要区全部可还是用 s_de.cv
 '''
 from selenium import webdriver
 from pathlib import Path
@@ -20,5 +20,7 @@ driver.get(pt)
 driver.find_element_by_class_name('aa').send_keys('用户名')
 driver.find_element_by_class_name('bb').send_keys('pass')
 driver.find_element_by_class_name('cc').send_keys('word')
+sleep(2)
+driver.find_element_by_class_name('bb.cc').send_keys('加一个 。')  ## calss_name如果写全部的值中间加一个 .
 sleep(2)
 driver.quit()

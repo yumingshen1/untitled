@@ -23,7 +23,7 @@ import os
 
 with webdriver.Chrome() as driver:
     file_path = os.path.dirname(__file__)
-    path = os.path.join('{}'.format('file://')+file_path,'text_b.html')
+    path = os.path.join('{}'.format('file://') + file_path, 'test_b.html')
     driver.get(path)
     driver.find_element_by_xpath("//*[starts-with(@id,'ale')]").click() #所有的标签下，id值以ale开头的元素
     sleep(2)
