@@ -15,9 +15,9 @@ class DBConnect:
     def select(self,sql,many=True):
         self.cursor.execute(sql)
         if many:
-            result = self.cursor.fetchone()
-        else:
             result = self.cursor.fetchall()
+        else:
+            result = self.cursor.fetchone()
         return result
 
     ## 通用操作
