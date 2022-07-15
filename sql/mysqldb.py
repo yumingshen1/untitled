@@ -5,10 +5,9 @@ con = pymysql.connect(
     host='127.0.0.1',
     user='root',
     password='Sym123456',
-    db='ceshi',
-    port=3306,
-    charset="utf-8"
-)
+    database='ceshi',
+    port=3306)
+
 #创建游标
 c = con.cursor()
 c.execute('select * from biaodan')
@@ -18,7 +17,7 @@ c.execute('select * from biaodan')
 
 # rows = c.fetchmany(10)
 # print("取出10条数据:" + rows)
-#
+
 rr = c.fetchall()
 print("取出所有数据：",rr)
 

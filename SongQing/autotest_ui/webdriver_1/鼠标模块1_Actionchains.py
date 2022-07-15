@@ -27,7 +27,7 @@ if test_flag ==1:
     driver.quit()
 
 '''
-拖动 drag_and_drop 的源码实现--分别点击拖动元素和目标元素
+拖拽 drag_and_drop， 按住 click_and_hold，释放 release  的源码实现--分别点击拖动元素和目标元素
 '''
 if test_flag ==4:
     driver.find_element_by_link_text('Drag Drop Test').click()
@@ -39,13 +39,13 @@ if test_flag ==4:
     for ele_drop_item in ele_drop_items:
         myAction = ActionChains(driver)
         myAction.click_and_hold(ele_drag)   #点击拖动元素，不松手
-        myAction.release(ele_drop_item) #拖到目标元素
+        myAction.release(ele_drop_item) #拖到目标元素，释放
         myAction.perform()  #执行
         sleep(1)
     driver.quit()
 
 '''
-拖动 drag_and_drop（位置1，位置2）
+拖拽 drag_and_drop（位置1，位置2）
 '''
 if test_flag ==3:
     driver.find_element_by_link_text('Drag Drop Test').click()

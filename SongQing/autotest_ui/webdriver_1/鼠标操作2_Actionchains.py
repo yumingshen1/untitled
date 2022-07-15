@@ -5,7 +5,8 @@
 # @Software : PyCharm
 '''
 鼠标移动 悬浮-->点击
-
+move_to_element
+move_by_offset
 '''
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
@@ -33,4 +34,6 @@ if test_flag ==1:
 if test_flag ==2:
     ActionChains(driver).move_to_element(ele_menu).perform()  #鼠标移动到目标位置
     sleep(2)
-
+    driver.find_element_by_css_selector('a>strong').click()
+    sleep(2)
+    driver.quit()

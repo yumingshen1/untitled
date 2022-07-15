@@ -12,9 +12,9 @@ text()='文本值' #替代link_text
 contains(text(),文本包含的值) #替代partial_link_text
 
 示例:
-//p[@text()='xxx']
-//p[contains(text(),'xxx')]
-//input[starts-with(@id,'xxx')]
+//p[@text()='xxx']          文本值
+//p[contains(text(),'xxx')]     文本包含的只
+//input[starts-with(@id,'xxx')]     以xxx开头的id值
 '''
 
 from selenium import webdriver

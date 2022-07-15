@@ -10,7 +10,7 @@ with webdriver.Chrome() as driver:
     path1 = 'http://121.41.14.39:8088/index.html#/'
     path2 = 'http://124.223.31.21:8090/forum.php'
 
-    test_flage = 1
+    test_flage = 3
     if test_flage ==1:
         driver.get(path2)
         sleep(2)

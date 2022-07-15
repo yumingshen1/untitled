@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>第一个HTML脚本</title>
+    <script>
+        function show_confirm()
+            {
+            var r=confirm("请选择!");
+            if (r==true)
+              {
+              document.write("你选择了确定!");
+              }
+            else
+              {
+              document.write("你选择了取消!");
+              }
+            }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        用户名: <input id="uname" type="text">
+        <br>
+        <input type="button" id="alert" value='alert' onclick="alert('欢迎来到松勤软件测试')">
+        <input type="button" id="confirm" value='confirm' onclick="show_confirm('请选择你的操作')">
+        <input type="button" id="prompt" value='prompt' onclick="var name = prompt('请输入你的名字:');document.write(name)">
+    </div>
+    <div id="div2">
+		<a href="https://www.baidu.com" target="_blank">百度一下</a>
+	</div>
+    <iframe id='if' name='nf' src="http://121.41.14.39:8088/index.html#/" width="800" height="600"></iframe>
+</body>
+</html>
+<!-- HTML的关闭 -->

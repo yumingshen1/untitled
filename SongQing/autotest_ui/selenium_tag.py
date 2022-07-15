@@ -15,7 +15,7 @@ import os
 
 # with webdriver.Chrome() as driver:
 driver = webdriver.Chrome()
-driver.get(r'file://Users/shenyuming/PycharmProjects/untitled/SongQing/autotest_ui/test_a.html')
+driver.get(r'file:///Users/shenyuming/PycharmProjects/untitled/SongQing/autotest_ui/test_a.html')
 sleep(1)
 ele = driver.find_element_by_tag_name('p')
 ele2 = driver.find_element_by_tag_name('title')
